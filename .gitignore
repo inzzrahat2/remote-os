@@ -1,0 +1,31 @@
+# --- never publish: device-specific / private ---
+# full partition backup incl. IMEI/radio calibration (modemst, fsg, persist)
+redmi7-backup/
+# this phone's serial, Bluetooth MACs, LAN IPs / deploy.sh overrides
+LOCAL.md
+LOCAL.env
+*.keystore
+
+# --- proprietary / third-party binaries (fetched or extracted locally) ---
+re/*.so
+re/*.trace
+re/ir_trace.txt
+re/*.spi
+tools/zig-*/
+tools/btstack/
+tools/dl/
+
+# --- boot images & extracted ramdisks (built from YOUR device's recovery, see README) ---
+*.img
+*.img.gz
+boot/kernel
+boot/ramdisk.orig
+boot/rec_ramdisk.bin
+boot/rec_rd/
+
+# --- build outputs ---
+app/remoteos
+app/hcitest
+bt/btremote
+*.raw
+__pycache__/
